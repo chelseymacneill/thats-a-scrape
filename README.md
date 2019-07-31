@@ -1,5 +1,5 @@
 # thats-a-scrape
-An app that uses scraping and cheerio to allow users to comment on news articles. 
+An app that uses scraping and cheerio to allow users to comment on news articles that pertain to privacy trends. 
 
 # Sites to scrape
 https://www.nytimes.com/topic/subject/privacy
