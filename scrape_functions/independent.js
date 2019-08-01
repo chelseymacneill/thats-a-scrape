@@ -13,7 +13,7 @@ function independentScrape() {
     "\n***********************************\n");
     
     // Making a request via axios for reddit's "webdev" board. The page's HTML is passed as the callback's third argument
-    axios.get("https://www.nytimes.com/topic/subject/privacy").then(function(response) {
+    axios.get("https://www.independent.co.uk/topic/Privacy").then(function(response) {
     
     // Load the HTML into cheerio and save it to a variable
     // '$' becomes a shorthand for cheerio's selector commands, much like jQuery's '$'
@@ -27,7 +27,9 @@ function independentScrape() {
     $(".content").each(function(i, element) {
         
         // Save the headline to the story
-        var main = $(this)
+        var main = $(this).children().attr()
+
+        // Link to the articles
         
         // In the currently selected element, look at its child elements (i.e., its a-tags),
         // then save the values for any "href" attributes that the child elements may have

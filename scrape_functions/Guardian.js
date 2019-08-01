@@ -29,6 +29,7 @@ $(".fc-item__content").each(function(i, element) {
 let headline = $(this).text().trim()
 
 let link = $(this).children(".fc-item__title").find()
+let link2 = JSON.parse(link)
 
   // // Save the headline to the story
   // var headline = $(this).children(".story-link").children(".story-meta").children(".headline").text().trim()
@@ -46,7 +47,7 @@ let link = $(this).children(".fc-item__title").find()
   // Save these results in an object that we'll push into the results array we defined earlier
   results.push({
     headline: headline,
-    link: link
+    link2: link2
   });
 });
 

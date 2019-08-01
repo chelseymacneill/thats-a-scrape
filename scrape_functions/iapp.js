@@ -13,7 +13,7 @@ function iappScrape() {
   "\n***********************************\n");
   
   // Making a request via axios for reddit's "webdev" board. The page's HTML is passed as the callback's third argument
-  axios.get("https://iapp.org/news/united-states-dashboard-digest/").then(function(response) {
+  axios.get("https://www.facebook.com/").then(function(response) {
   
   // Load the HTML into cheerio and save it to a variable
   // '$' becomes a shorthand for cheerio's selector commands, much like jQuery's '$'
@@ -21,13 +21,17 @@ function iappScrape() {
   
   // An empty array to save the data that we'll scrape
   var results = [];
+  let something = $.html()
+  //let main2 = $("#resource-search-global").html();
+  //let vanilla = document.querySelector("#resource-search-global").innerHTML
+  console.log(something);
   
   
   // (i: iterator. element: the current element)
-  $(".hit-wrapper").each(function(i, element) {
+  $("#toolbarContainer").each(function(i, element) {
     
     // Exploring the html 
-    let main = $(this).find()
+    let main = $(this).children()
     
     // In the currently selected element, look at its child elements (i.e., its a-tags),
     // then save the values for any "href" attributes that the child elements may have
@@ -35,7 +39,7 @@ function iappScrape() {
     
     // Save these results in an object that we'll push into the results array we defined earlier
     results.push({
-      main: main
+      main
     });
   });
   
